@@ -3,11 +3,15 @@ import org.apache.spark.sql.SparkSession
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 import com.github.nscala_time.time.Imports._
+
+import scala.collection.mutable.ArrayBuffer._
 import util.control.Breaks._
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions.{current_date,current_timestamp}
+import org.apache.spark.sql.functions.{current_date, current_timestamp}
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.functions.{lit,udf}
+import org.apache.spark.sql.functions.{lit, udf}
+
+import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
 object  sparkSqlCookBook {
   def main(args: Array[String]): Unit = {
@@ -33,14 +37,7 @@ object  sparkSqlCookBook {
     println("______________  Showing Statistics ________________-")
     df.describe("Price Value").show()
     println(DateTime.now() + 2.months)
-    val x = 1 to 100
-    val y = (1 to 50) toArray // converting to An array
-    val z = (1 to 25) toList //Converting to an list
 
-
-    println(x)
-    println(y)
-    println(z)
 
     println("___________ Control Structures __________________")
        ///Zip With Index
@@ -61,6 +58,11 @@ object  sparkSqlCookBook {
     val Names = Array("Soumith","Sai","Challa")
     val CapNames = for (i <-  Names) yield i.toUpperCase()   // writing one collection (array) to other collection (Vector)
     CapNames.foreach(println)
+    var ABuff = ArrayBuffer[String]()
+    ABuff += "John"
+    ABuff += "Nash"
+    ABuff += "Park"
+    println(ABuff)
     spark.close()
   }
 }
