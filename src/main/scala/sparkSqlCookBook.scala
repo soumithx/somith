@@ -36,12 +36,12 @@ object  sparkSqlCookBook {
     val x = 1 to 100
     val y = (1 to 50) toArray // converting to An array
     val z = (1 to 25) toList //Converting to an list
-    val ranRange = 0 to Random.nextInt(100)
+
 
     println(x)
     println(y)
     println(z)
-    println(ranRange)
+
     spark.close()
   }
 }
