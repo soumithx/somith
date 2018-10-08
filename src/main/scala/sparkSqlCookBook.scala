@@ -41,7 +41,7 @@ object  sparkSqlCookBook {
     println(x)
     println(y)
     println(z)
-    println(ranRange)
+
     spark.close()
   }
 }
