@@ -2,8 +2,8 @@ import org.apache.spark.{SparkConf, sql}
 import org.apache.spark.sql.SparkSession
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
-//import com.github.nscala_time.time.Imports._
-import com.github.nscala_money.money.Imports._
+import com.github.nscala_time.time.Imports._
+import util.control.Breaks._
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.{current_date,current_timestamp}
 import org.apache.spark.rdd.RDD
@@ -32,7 +32,7 @@ object  sparkSqlCookBook {
     df.withColumn("Sale Code",lit(randChar())).withColumn("market",lit(rand())).withColumn("Stocks",lit(r.nextInt(200))).withColumn("Date",lit(current_date())).withColumn("time",lit(current_timestamp())).show(false)
     println("______________  Showing Statistics ________________-")
     df.describe("Price Value").show()
-    //println(DateTime.now() + 2.months)
+    println(DateTime.now() + 2.months)
     val x = 1 to 100
     val y = (1 to 50) toArray // converting to An array
     val z = (1 to 25) toList //Converting to an list
@@ -42,6 +42,25 @@ object  sparkSqlCookBook {
     println(y)
     println(z)
 
+    println("___________ Control Structures __________________")
+       ///Zip With Index
+    val a = Array("Soumith","sai","Challa")
+    for((e,count) <- a.zipWithIndex){
+      println(s"$count is $e" )
+    }
+
+    var numPs = 0
+    val passage = "peter parker is powerfull programmmer"
+    for (i <- 0 until  passage.length){
+      breakable{
+       if(passage.charAt(i) != 'p') { break } else {numPs += 1}
+    }}
+    println(s"""there are $numPs in the string""")
+    println("_________ Guards _________________")
+    for(i <- 0 to 10 if i%2 == 0 )println(i)    //Guards --> if condition in for loop
+    val Names = Array("Soumith","Sai","Challa")
+    val CapNames = for (i <-  Names) yield i.toUpperCase()   // writing one collection (array) to other collection (Vector)
+    CapNames.foreach(println)
     spark.close()
   }
 }
