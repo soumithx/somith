@@ -63,6 +63,32 @@ object  sparkSqlCookBook {
     ABuff += "Nash"
     ABuff += "Park"
     println(ABuff)
+    val i = 5
+    i match {
+      case 1 => println("Jan")
+      case 2 => println("Feb")
+      case 3 => println("Mar")
+      case 4 => println("Apr")
+      case 5 => println("May")
+      case 6 => println("Jun")
+      case 7 => println("Jul")
+      case 8 => println("Aug")
+      case 9 => println("Sep")
+      case 10 => println("Oct")
+      case 11 => println("Nov")
+      case 12 => println("Dec")
+    }
+
+
+    println("_______________Mulitple Matching Conditions _______")
+    println("\n")
+    val q = 5
+    q match{ case 1| 3 | 5| 7|9| 11 => println("Odd") case 2 | 4 | 6| 8| 10 => println("Even")}
+    val p = new Person("dd","dd")
+     p.firstName = "Soumith"
+     p.SecondName = "Binnu"
+      println(p)
+
     spark.close()
   }
 }
