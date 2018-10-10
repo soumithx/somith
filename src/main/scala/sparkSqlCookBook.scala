@@ -3,11 +3,15 @@ import org.apache.spark.sql.SparkSession
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 import com.github.nscala_time.time.Imports._
+
+import scala.collection.mutable.ArrayBuffer._
 import util.control.Breaks._
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions.{current_date,current_timestamp}
+import org.apache.spark.sql.functions.{current_date, current_timestamp}
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.functions.{lit,udf}
+import org.apache.spark.sql.functions.{lit, udf}
+
+import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
 object  sparkSqlCookBook {
   def main(args: Array[String]): Unit = {
@@ -33,14 +37,7 @@ object  sparkSqlCookBook {
     println("______________  Showing Statistics ________________-")
     df.describe("Price Value").show()
     println(DateTime.now() + 2.months)
-    val x = 1 to 100
-    val y = (1 to 50) toArray // converting to An array
-    val z = (1 to 25) toList //Converting to an list
 
-
-    println(x)
-    println(y)
-    println(z)
 
     println("___________ Control Structures __________________")
        ///Zip With Index
@@ -61,6 +58,37 @@ object  sparkSqlCookBook {
     val Names = Array("Soumith","Sai","Challa")
     val CapNames = for (i <-  Names) yield i.toUpperCase()   // writing one collection (array) to other collection (Vector)
     CapNames.foreach(println)
+    var ABuff = ArrayBuffer[String]()
+    ABuff += "John"
+    ABuff += "Nash"
+    ABuff += "Park"
+    println(ABuff)
+    val i = 5
+    i match {
+      case 1 => println("Jan")
+      case 2 => println("Feb")
+      case 3 => println("Mar")
+      case 4 => println("Apr")
+      case 5 => println("May")
+      case 6 => println("Jun")
+      case 7 => println("Jul")
+      case 8 => println("Aug")
+      case 9 => println("Sep")
+      case 10 => println("Oct")
+      case 11 => println("Nov")
+      case 12 => println("Dec")
+    }
+
+
+    println("_______________Mulitple Matching Conditions _______")
+    println("\n")
+    val q = 5
+    q match{ case 1| 3 | 5| 7|9| 11 => println("Odd") case 2 | 4 | 6| 8| 10 => println("Even")}
+    val p = new Person("dd","dd")
+     p.firstName = "Soumith"
+     p.SecondName = "Binnu"
+      println(p)
+
     spark.close()
   }
 }
