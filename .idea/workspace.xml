@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e95814d9-7c78-4e16-9060-64d427681b96" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/CommunitcatingActors.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/AkkaActors.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/AkkaActors.scala" afterDir="false" />
     </list>
@@ -34,14 +35,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AkkaActors.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AkkaActors.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/AkkaActors.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="132">
+              <caret line="4" column="58" lean-forward="true" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommunitcatingActors.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/CommunitcatingActors.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -96,6 +106,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/sparkSqlCookBook.scala" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/AkkaActors.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/CommunitcatingActors.scala" />
       </list>
     </option>
   </component>
@@ -108,10 +119,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="35" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="width" value="1405" />
+    <option name="height" value="823" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -179,9 +191,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AkkaActors">
+  <component name="RunManager" selected="Application.CommunitcatingActors">
     <configuration name="AkkaActors" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="AkkaActors" />
+      <module name="somith" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="CommunitcatingActors" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="CommunitcatingActors" />
       <module name="somith" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -234,9 +251,11 @@
     <list>
       <item itemvalue="Application.sparkSqlCookBook" />
       <item itemvalue="Application.AkkaActors" />
+      <item itemvalue="Application.CommunitcatingActors" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CommunitcatingActors" />
         <item itemvalue="Application.AkkaActors" />
         <item itemvalue="Application.sparkSqlCookBook" />
       </list>
@@ -253,7 +272,7 @@
       <option name="presentableId" value="Default" />
       <updated>1538945300981</updated>
       <workItem from="1538945304767" duration="22064000" />
-      <workItem from="1539128322579" duration="3012000" />
+      <workItem from="1539128322579" duration="6548000" />
     </task>
     <task id="LOCAL-00001" summary="Line Deletion">
       <created>1538965854120</created>
@@ -311,14 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539131202282</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Akka Actors">
+      <created>1539132169564</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1539132169564</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25076000" />
+    <option name="totallyTimeSpent" value="28612000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
+    <frame x="35" y="23" width="1405" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -333,16 +359,16 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889959" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.48541668" weight="0.28838453" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.48541668" visible="true" weight="0.28838453" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" x="0" y="45" width="1440" height="800" id="Run" order="2" sideWeight="0.7236111" type="WINDOWED" visible="true" weight="0.40448114" />
+      <window_info anchor="bottom" x="1" y="45" width="1440" height="801" id="Run" order="2" sideWeight="0.7236111" type="WINDOWED" visible="true" weight="0.40448114" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0069444445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14875445" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -404,13 +430,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/somith.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/AkkaActors.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="132">
+          <caret line="4" column="58" lean-forward="true" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/CommunitcatingActors.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
