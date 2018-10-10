@@ -4,8 +4,8 @@ import akka.actor.Props
 //Creation of Actor
 class HelloActor extends Actor{
    def receive ={
-     case "Start Engine" => println("Actor Engine Instantiated")
-     case _ => println("Invalid Action Recieved")
+     case "Start Engine" => println("Actor Engine Instantiated . . . . .  . ")
+     case _ => println(" \n \n Invalid Action Recieved")
    }
 }
 
